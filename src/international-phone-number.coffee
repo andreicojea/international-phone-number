@@ -109,7 +109,7 @@ angular.module("internationalPhoneNumber", [])
       element.intlTelInput("isValidNumber")
 
     element.on 'blur keyup change', (event) ->
-      scope.$apply read
+      scope.$applyAsync read
 
     element.on '$destroy', () ->
       element.intlTelInput('destroy');
